@@ -23,7 +23,7 @@ void loop() {
   distance = 343.5 * time / 10000;
   Serial.print(distance); Serial.println(" cm");
   
-  if(distance <= 5 || distance >= 200) 
+  if(distance <= 10 || distance >= 200) 
   {
   digitalWrite(red,HIGH);
   digitalWrite(green,LOW);
