@@ -1,0 +1,12 @@
+int sensorValue = 0;
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  sensorValue = analogRead(A0);
+  analogWrite(11,(int)(sensorValue/4));//Piros led fényerő szabályozás
+  Serial.print("sensor = ");
+  Serial.println(sensorValue);
+  delay(10);
+}
